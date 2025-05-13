@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/LoggedInUser.feature", // LoggedInUser.feature
+        features = "src/test/resources/features/ShareTestdata.feature", // LoggedInUser.feature
         glue = {
                 "stepDefinitions",
 //                "utils.Hooks",

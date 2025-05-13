@@ -18,8 +18,11 @@ public class Hooks {
     @Before
     public void beforeScenario(Scenario scenario){
         scenario.log("Starting scenario: " + scenario.getName());
+//        base.createScenarioContext();
+//        base.setScenario(scenario);
         base.openApp();
     }
+
 
     @After
     public void afterScenario(Scenario scenario){

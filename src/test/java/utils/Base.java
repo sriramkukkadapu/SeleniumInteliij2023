@@ -1,9 +1,12 @@
 package utils;
 
 import PageObjects.HomePage;
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import PageObjects.LoginPage;
+
+import java.util.HashMap;
 
 public class Base  {
     public WebDriver driver;
@@ -11,8 +14,12 @@ public class Base  {
     public HomePage homePage;
     public LoginPage loginPage;
 
+    private HashMap<String, Object> data;
+    private Scenario scenario;
+
     public Base() {
 //        openApp();
+        data = new HashMap<String,Object>();
     }
 
     public void openApp(){
@@ -32,4 +39,13 @@ public class Base  {
     public void closeApp(){
         driver.quit();
     }
+
+    public void put(String key, Object value){
+        data.put(key,value);
+    }
+
+    public Object get(String key){
+        return data.get(key);
+    }
+
 }
